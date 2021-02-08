@@ -74,6 +74,8 @@ function printBoxPairs(arr) {
   }
 }
 
-printBoxPairs(boxes2); // O(n^2);
+printBoxPairs(boxes2); // O(n^2) - quadratic time
 
+function printBoxPairsBetter(arr) {
 
+}
