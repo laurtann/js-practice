@@ -32,7 +32,7 @@ function funChallenge(input) {
   return a; // O(1)
 }
 
-funChallenge(); // O(4n + 3) -> debatable is assignments should be calc'd
+funChallenge(); // O(4n + 3) -> debatable is assignments should be calc'd => reduce to O(n)
 
 function anotherFunChallenge(input) {
   let a = 5; // O(1)
@@ -50,4 +50,4 @@ function anotherFunChallenge(input) {
   let whoAmI = "I don't know"; // O(1)
 }
 
-anotherFunChallenge(); // O(7n + 4)
+anotherFunChallenge(); // O(7n + 4) => reduce to O(n)
