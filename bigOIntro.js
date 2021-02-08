@@ -74,8 +74,18 @@ function printBoxPairs(arr) {
   }
 }
 
-printBoxPairs(boxes2); // O(n^2) - quadratic time
+printBoxPairs(boxes2); // O(n^2) - quadratic time. if the arrs were different, O(a*b)
 
-function printBoxPairsBetter(arr) {
+function printBoxPairsBetterAndSayHi(arr) {
+  for (let i of arr) { //O(n)
+    console.log("HI");
+  }
 
+  for (let i = 0; i < arr.length; i++) { // O(n)
+    for (let j = 0; j < arr.length; j++) { // O(n)
+      console.log(arr[i], arr[j]);
+    }
+  }
 }
+
+printBoxPairsBetterAndSayHi(boxes2); //O(n + n^2) => O(n^2). drop non-dom terms
