@@ -52,7 +52,7 @@ function anotherFunChallenge(input) {
 
 // anotherFunChallenge(); // O(7n + 4) => reduce to O(n)
 
-const boxes2 = [1, 2, 3];
+const boxes2 = [1, 2, 3, 4, 5];
 
 function compressBoxesTwice(a, b) {
   a.forEach(function(a) {
@@ -64,4 +64,16 @@ function compressBoxesTwice(a, b) {
   });
 }
 
-compressBoxesTwice(boxes, boxes2); // O(a + b)
+compressBoxesTwice(boxes, boxes2); // O(a + b) NOT O(n) because diff inputs
+
+function printBoxPairs(arr) {
+  for (let i = 0; i < arr.length; i++) { // O(n)
+    for (let j = 0; j < arr.length; j++) { // O(n)
+      console.log(arr[i], arr[j]);
+    }
+  }
+}
+
+printBoxPairs(boxes2); // O(n^2);
+
+
