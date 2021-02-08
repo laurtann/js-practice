@@ -20,6 +20,6 @@ function commonItems(arr1, arr2) {
   return false;
 }
 
-console.log(commonItems(array1, array2)); // O(n)
+console.log(commonItems(array1, array2)); // O(a * b)
 
 
