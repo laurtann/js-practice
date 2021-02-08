@@ -32,7 +32,7 @@ function funChallenge(input) {
   return a; // O(1)
 }
 
-funChallenge(); // O(4n + 3) -> debatable is assignments should be calc'd => reduce to O(n)
+// funChallenge(); // O(4n + 3) -> debatable is assignments should be calc'd => reduce to O(n)
 
 function anotherFunChallenge(input) {
   let a = 5; // O(1)
@@ -50,4 +50,18 @@ function anotherFunChallenge(input) {
   let whoAmI = "I don't know"; // O(1)
 }
 
-anotherFunChallenge(); // O(7n + 4) => reduce to O(n)
+// anotherFunChallenge(); // O(7n + 4) => reduce to O(n)
+
+const boxes2 = [1, 2, 3];
+
+function compressBoxesTwice(a, b) {
+  a.forEach(function(a) {
+    console.log(a);
+  });
+
+  b.forEach(function(b) {
+    console.log(b);
+  });
+}
+
+compressBoxesTwice(boxes, boxes2); // O(a + b)
