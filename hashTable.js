@@ -21,7 +21,7 @@ class HashTable {
     return this.data;
   }
 
-  get(key) {
+  get(key) { // O(1) => would be O(n) if tons of linked lists
     let address = this._hash(key);
     const currBucket = this.data[address];
     if (currBucket) {
@@ -33,6 +33,16 @@ class HashTable {
     }
     return undefined;
   }
+
+  keys() {
+    const keyArray = [];
+    for (let data of this.data) {
+      if (data) {
+        keyArray.push(data[0][0]);
+      }
+    }
+    return keyArray;
+  }
 }
 
 // memory space
@@ -41,3 +51,4 @@ console.log(myHashTable.set('grapes', 10000));
 console.log(myHashTable.get('grapes'));
 myHashTable.set('apples', 9)
 console.log(myHashTable.get('apples'));
+console.log(myHashTable.keys());
