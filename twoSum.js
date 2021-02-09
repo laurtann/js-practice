@@ -12,18 +12,3 @@ const twoSum = function(nums, target) {
     }
   }
 };
-
-// little faster, O(n)
-const twoSum2 = function(nums, target) {
-  let ansObj = {}
-
-  for (let i = 0; i < nums.length; i++) {
-      ansObj[nums[i]] = i;
-  }
-
-  for (let i = 0; i < nums.length; i++) {
-      if (ansObj[target - nums[i]]) {
-          return [ansObj[target - nums[i]], i];
-      }
-  }
-}
