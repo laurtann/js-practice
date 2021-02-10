@@ -37,7 +37,8 @@ class Stack {
     if (this.top === this.bottom) {
       this.bottom = null;
     }
-    const oldTop = this.top;
+    // if omit this, JS will garbage collect it bc it's not being used;
+    // const oldTop = this.top;
     this.top = this.top.next;
     this.length--;
     return this;
@@ -65,6 +66,7 @@ const myStack = new Stack();
 myStack.push(10);
 myStack.push(9);
 myStack.push(8);
+myStack.pop();
 myStack.pop();
 console.log(myStack.peek());
 console.log(myStack.printList());
