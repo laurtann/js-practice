@@ -88,6 +88,25 @@ class LinkedList {
     nodeBefore.next = nodeAfter;
     this.length--;
   }
+
+  reverse() {
+    if (!this.head.next) {
+      return this;
+    }
+
+    let first = this.head;
+    this.tail = this.head;
+    let second = first.next;
+    // while there is a next, second points to first: switches pointers
+    while (second) {
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this.head.next = null;
+    this.head = first;
+  }
 }
 
 const myLinkedList = new LinkedList(10);
@@ -96,5 +115,6 @@ myLinkedList.append(16);
 myLinkedList.prepend(1);
 myLinkedList.insert(2, 99);
 myLinkedList.remove(4);
+// myLinkedList.reverse();
 console.log(myLinkedList.printList());
 // console.log(myLinkedList);
