@@ -13,6 +13,7 @@
 //     }
 //   }
 // }
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -55,7 +56,6 @@ class LinkedList {
 
   insert(index, value) {
     const newNode = new Node(value);
-    let currNode = this.head;
     if (index === 0) {
       this.prepend(value);
       return;
@@ -81,6 +81,13 @@ class LinkedList {
     }
     return currNode;
   }
+
+  remove(index) {
+    const nodeBefore = this.traverseToIndex(index - 1);
+    const nodeAfter = this.traverseToIndex(index + 1);
+    nodeBefore.next = nodeAfter;
+    this.length--;
+  }
 }
 
 const myLinkedList = new LinkedList(10);
@@ -88,5 +95,6 @@ myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.prepend(1);
 myLinkedList.insert(2, 99);
+myLinkedList.remove(4);
 console.log(myLinkedList.printList());
 // console.log(myLinkedList);
