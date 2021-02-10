@@ -15,6 +15,7 @@ class HashTable {
   set(key, value) {
     let address = this._hash(key);
     if (!this.data[address]) {
+      // linked list would be better here - prevent O(n) for deletion/insertion
       this.data[address] = [];
     }
     this.data[address].push([key, value]);
