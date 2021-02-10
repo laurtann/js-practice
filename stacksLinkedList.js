@@ -1,4 +1,3 @@
-
 class Node {
   constructor(value){
     this.value = value;
@@ -70,9 +69,6 @@ myStack.pop();
 myStack.pop();
 console.log(myStack.peek());
 console.log(myStack.printList());
-
-
-
 
 //Discord
 //Udemy
