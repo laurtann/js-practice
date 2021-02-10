@@ -14,6 +14,7 @@ class DoublyLinkedList {
     this.tail = this.head;
     this.length = 1;
   }
+  // O(1)
   append(value) {
     const newNode = new Node(value);
     newNode.prev = this.tail;
@@ -23,6 +24,7 @@ class DoublyLinkedList {
     return this;
   }
 
+  // O(1)
   prepend(value) {
     const newNode = new Node(value);
     newNode.next = this.head;
@@ -42,6 +44,7 @@ class DoublyLinkedList {
     return array;
   }
 
+  // O(n)
   insert(index, value) {
     const newNode = new Node(value);
     if (index === 0) {
@@ -72,6 +75,7 @@ class DoublyLinkedList {
     return currNode;
   }
 
+  // O(n)
   remove(index) {
     const nodeBefore = this.traverseToIndex(index - 1);
     if (index === this.length - 1) {
