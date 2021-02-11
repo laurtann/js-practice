@@ -1,5 +1,5 @@
 // Write two functions that finds the factorial of any number. One should use recursive, the other should just use a for loop
-function findFactorialRecursive(number) { // O(n)
+function findFactorialRecursive(number) { // O(ngit)
   if (number == 0) {
     return 1;
   }
